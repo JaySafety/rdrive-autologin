@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Auto Login to RDrive</title>
+  <script>
+    window.onload = function() {
+      const form = document.createElement('form');
+      form.method = 'POST';
+      form.action = 'https://damen.rdrive.io/login';
+
+      const email = document.createElement('input');
+      email.name = 'email';
+      email.value = 'rdrive-dsr@damen.com';
+      form.appendChild(email);
+
+      const password = document.createElement('input');
+      password.name = 'password';
+      password.value = '123456';
+      form.appendChild(password);
+
+      document.body.appendChild(form);
+      form.submit();
+    };
+  </script>
+</head>
+<body>
+  <p>Logging in...</p>
+</body>
+</html>
